@@ -4,15 +4,15 @@
 
 Add the Tracking to your `main.js`:
 
-// Add Tracking.
+Add Tracking.
 
 `import tracker from 'massiveart-tracking';`
 
-// Add the specific tracking type. Valid types are `tracker-googler` and `tracker-matomo`.
+Add the specific tracking type. Valid types are `tracker-googler` and `tracker-matomo`.
 
 `import MatomoTracker from 'massiveart-tracking/tracker-matomo';`
 
-// Finally, Add the type to the tracker instance.
+Finally, Add the type to the tracker instance.
 
 `tracker.add(new MatomoTracker());`
 
