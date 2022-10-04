@@ -1,6 +1,6 @@
 {
   "name": "massiveart-tracking",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A packager for tracking.",
   "main": "tracker.js",
   "scripts": {
