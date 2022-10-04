@@ -1,8 +1,8 @@
 {
   "name": "massiveart-tracking",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A packager for tracking.",
+  "main": "tracker.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
