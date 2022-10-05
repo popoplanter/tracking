@@ -48,7 +48,9 @@ class Tracker {
                 },
             };
 
-            window.cookiehub.load(cpm);
+            if ('undefined' !== typeof window.cookiehub){
+                window.cookiehub.load(cpm);
+            }
         });
         /* eslint-enable */
     }
