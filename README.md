@@ -42,7 +42,7 @@ Use the functions:
 
 # 3 Cookiehub consent and Matomo
 
-This package automatically handles the cookie constent logic of matomo in combination with Cookiehub.
+This package automatically handles the cookie consent logic of Matomo in combination with Cookiehub.
 All you need to do is correctly import the Cookiehub Script and Matomo script.
 * IMPORTANT: Add `_paq.push(['requireConsent']);` to Matomo script for this to work.
 
