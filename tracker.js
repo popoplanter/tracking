@@ -33,22 +33,34 @@ class Tracker {
             var cpm = {
                 onInitialise: function () {
                     if (!this.hasConsented('analytics')) {
-                        _paq.push(['forgetConsentGiven']);
+                        _paq.push(['forgetCookieConsentGiven']);
+
+                        if ('undefined' !== typeof fbq) {
+                            fbq('consent', 'grant');
+                        }
                     }
                 },
                 onAllow: function (category) {
                     if ('analytics' === category) {
-                        _paq.push(['rememberConsentGiven']);
+                        _paq.push(['rememberCookieConsentGiven']);
+
+                        if ('undefined' !== typeof fbq) {
+                            fbq('consent', 'grant');
+                        }
                     }
                 },
                 onRevoke: function (category) {
                     if ('analytics' === category) {
-                        _paq.push(['forgetConsentGiven']);
+                        _paq.push(['forgetCookieConsentGiven']);
+
+                        if ('undefined' !== typeof fbq) {
+                            fbq('consent', 'revoke');
+                        }
                     }
                 },
             };
 
-            if ('undefined' !== typeof window.cookiehub){
+            if ('undefined' !== typeof window.cookiehub) {
                 window.cookiehub.load(cpm);
             }
         });
