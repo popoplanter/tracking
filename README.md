@@ -40,14 +40,28 @@ Use the functions:
 
 `Or a correctly formatted Datalayer object with tracker.dataLayerPush(data);`
 
-# 3 Cookiehub consent and Matomo
+# 3 Cookiehub consent
+## 3.1 Cookiehub consent and Matomo
 
 This package automatically handles the cookie constent logic of matomo in combination with Cookiehub.
 All you need to do is correctly import the Cookiehub Script and Matomo script.
-* IMPORTANT: Add `_paq.push(['requireConsent']);` to Matomo script for this to work.
+* IMPORTANT: Add `_paq.push(['requireConsent']);` to your Matomo script for this to work.
 
-On a later stage, a custom cookie message might be implemented with this package and Cookiehub support will be dropped.
+For more information, see the [Matomo documentation for consent](https://developer.matomo.org/guides/tracking-consent).
 
-## 4 Git
+## 3.2 Cookiehub consent and Facebook (fbq)
+
+This package automatically handles the cookie constent logic of the Facebook pixel (in consent mode) in combination with Cookiehub.
+All you need to do is correctly import the Cookiehub Script and Facebook script.
+* IMPORTANT: Add `fbq('consent', 'revoke');` to your Facebook script for this to work.
+
+For more information, see the [Cookiehub guide on how to implement facebook in consent mode](https://support.cookiehub.com/article/78-facebook-pixel-consent-mode).
+
+## 3.3 Cookiehub Consent and other third party scripts (eg. Hotjar).
+
+If your project uses any other scripts that need to be blocked, until consent is given by Cookiehub, add the `data-consent="analytics"` data attribute to the script.
+For more information, see the [Cookiehub guide to handle scripts and iframes](https://support.cookiehub.com/article/156-adjust-script-and-iframe-tags-to-delay-load).
+
+## 4 Github
 
 [Github](https://github.com/popoplanter/tracking)
