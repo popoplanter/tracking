@@ -23,7 +23,7 @@ class Tracker {
 
     /**
      * Tell Matomo if Cookiehub consent is set or not.
-     * IMPORTANT: Add _paq.push(['requireConsent']); to Matomo script for this to work.
+     * IMPORTANT: Add _paq.push(['requireCookieConsent']); to Matomo script for this to work.
      */
     cookieHubMatomoConsent() {
         /* eslint-disable */
